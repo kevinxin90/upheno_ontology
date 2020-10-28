@@ -13,10 +13,10 @@ def load_annotations(data_folder):
 	for row in ontology_df.itertuples():
 		current_item = {
 			"_id": row[1], # HP Class ID
-			"HP class label": row[2], # HP Class Label
-			"MP class id": row[3], # Other ontology class ID
-			"MP ontology class label": row[4], # Other ontology class Label 
-			"Fuzzy equivalence score": row[5], # Fuzzy equivalence score
-			"Fuzzy SubClass score": row[6] # Fuzzy SubClass score	
+			"hp_class_label": row[2], # HP Class Label
+			"mp_class_id": row[3], # Other ontology class ID
+			"mp_ontology_class_label": row[4], # Other ontology class Label 
+			"fuzzy_equivalence_score": row[5], # Fuzzy equivalence score
+			"fuzzy_subclass_score": row[6] # Fuzzy SubClass score	
 		}
 		yield(current_item)
